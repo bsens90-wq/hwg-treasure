@@ -4,7 +4,13 @@
   "radius": 20,
   "startTime": "08:50",
   "endTime": "20:55",
-  "coupons": [],
+  "coupons": [
+    {
+      "name": "서티벅스 깊티",
+      "probability": 30,
+      "limit": 5
+    }
+  ],
   "digProb": 30,
   "digCooltime": 3
 }
