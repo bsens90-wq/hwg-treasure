@@ -7,7 +7,7 @@
   "coupons": [
     {
       "name": "서티벅스 깊티",
-      "probability": 30,
+      "probability": 100,
       "limit": 5
     }
   ],
