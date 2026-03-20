@@ -24,6 +24,11 @@
       "name": "샤넬 립글로우 1개",
       "probability": 0.5,
       "limit": 1
+    },
+    {
+      "name": "서타벅스 아메 1잔(근태상)",
+      "probability": 0,
+      "limit": 0
     }
   ],
   "digProb": 30,
