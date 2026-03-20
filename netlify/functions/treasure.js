@@ -133,6 +133,32 @@ exports.handler = async (event, context) => {
     }
 
     // ── 쿠폰 설정 조회
+    // after
+    // ── 스탬프 삭제 (관리자)
+    if (action === 'removeStamp') {
+      const { userCode, date } = body;
+      const { data, sha } = await readFile('data/stamps.json');
+      const stamps = data || {};
+      if (stamps[userCode]?.records) {
+        stamps[userCode].records = stamps[userCode].records.filter(r => r.date !== date);
+        await writeFile('data/stamps.json', stamps, sha, `스탬프 삭제: ${userCode} ${date}`);
+      }
+      return { statusCode: 200, headers, body: JSON.stringify({ success: true }) };
+    }
+
+    // ── 쿠폰 회수 (관리자)
+    if (action === 'revokeCoupon') {
+      const { userCode, couponIndex } = body;
+      const { data, sha } = await readFile('data/user_coupons.json');
+      const userCoupons = data || {};
+      if (userCoupons[userCode]?.coupons) {
+        const removed = userCoupons[userCode].coupons.splice(couponIndex, 1);
+        await writeFile('data/user_coupons.json', userCoupons, sha, `쿠폰 회수: ${userCode} ${removed[0]?.name || ''}`);
+      }
+      return { statusCode: 200, headers, body: JSON.stringify({ success: true }) };
+    }
+
+    // ── 쿠폰 설정 조회
     if (action === 'getCoupons') {
       const { data } = await readFile('data/config.json');
       const config = data || {};
