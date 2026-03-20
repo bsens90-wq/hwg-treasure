@@ -1,8 +1,10 @@
 {
-  "lat": 0,
-  "lng": 0,
-  "radius": 50,
+  "lat": 35.22462,
+  "lng": 128.679665,
+  "radius": 20,
   "startTime": "08:50",
-  "endTime": "08:55",
-  "coupons": []
+  "endTime": "20:55",
+  "coupons": [],
+  "digProb": 30,
+  "digCooltime": 3
 }
