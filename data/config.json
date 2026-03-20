@@ -6,9 +6,24 @@
   "endTime": "20:55",
   "coupons": [
     {
-      "name": "서티벅스 깊티",
-      "probability": 100,
-      "limit": 5
+      "name": "서티벅스 아메 1잔",
+      "probability": 5,
+      "limit": 2
+    },
+    {
+      "name": "교촌치킨 1마리",
+      "probability": 1,
+      "limit": 1
+    },
+    {
+      "name": "애플망고 1box",
+      "probability": 1,
+      "limit": 1
+    },
+    {
+      "name": "샤넬 립글로우 1개",
+      "probability": 1,
+      "limit": 1
     }
   ],
   "digProb": 30,
