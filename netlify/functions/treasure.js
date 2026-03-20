@@ -176,13 +176,20 @@ exports.handler = async (event, context) => {
     }
 
     // ── 쿠폰 발급 (확률 처리)
+   // after
+    // ── 쿠폰 발급 (확률 처리)
     if (action === 'issueCoupon') {
       const { userCode, username, date } = body;
 
-      // 설정 읽기
-      const { data: configData } = await readFile('data/config.json');
-      const config = configData || {};
-      const coupons = config.coupons || [];
+      // body.coupons가 있으면 우선 사용, 없으면 config.json에서 읽기
+      let coupons = [];
+      if (Array.isArray(body.coupons) && body.coupons.length > 0) {
+        coupons = body.coupons;
+      } else {
+        const { data: configData } = await readFile('data/config.json');
+        const config = configData || {};
+        coupons = config.coupons || [];
+      }
 
       // 발급 현황 읽기
       const { data: issuedData, sha: issuedSha } = await readFile('data/coupons_issued.json');
