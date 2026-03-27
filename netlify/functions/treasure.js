@@ -147,6 +147,21 @@ exports.handler = async (event, context) => {
     }
 
     // ── 쿠폰 회수 (관리자)
+   // after
+    // ── 쿠폰 사용처리 (관리자)
+    if (action === 'markCouponUsed') {
+      const { userCode, couponIndex } = body;
+      const { data, sha } = await readFile('data/user_coupons.json');
+      const userCoupons = data || {};
+      if (userCoupons[userCode]?.coupons?.[couponIndex] !== undefined) {
+        userCoupons[userCode].coupons[couponIndex].used = true;
+        await writeFile('data/user_coupons.json', userCoupons, sha,
+          `쿠폰 사용처리: ${userCode} ${userCoupons[userCode].coupons[couponIndex].name}`);
+      }
+      return { statusCode: 200, headers, body: JSON.stringify({ success: true }) };
+    }
+
+    // ── 쿠폰 회수 (관리자)
     if (action === 'revokeCoupon') {
       const { userCode, couponIndex } = body;
       const { data, sha } = await readFile('data/user_coupons.json');
