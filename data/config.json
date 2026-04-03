@@ -7,13 +7,13 @@
   "coupons": [
     {
       "name": "서티벅스 아메 1잔",
-      "probability": 5,
-      "limit": 2,
+      "probability": 15,
+      "limit": 4,
       "imageUrl": "https://raw.githubusercontent.com/bsens90-wq/hwg_main/main/main/images/starbucks.png"
     },
     {
       "name": "교촌치킨 1마리",
-      "probability": 1,
+      "probability": 10,
       "limit": 1,
       "imageUrl": "https://raw.githubusercontent.com/bsens90-wq/hwg_main/main/main/images/kyo.png"
     },
