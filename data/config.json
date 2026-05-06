@@ -7,25 +7,25 @@
   "coupons": [
     {
       "name": "서티벅스 아메 1잔",
-      "probability": 15,
+      "probability": 30,
       "limit": 4,
       "imageUrl": "https://raw.githubusercontent.com/bsens90-wq/hwg_main/main/main/images/starbucks.png"
     },
     {
       "name": "교촌치킨 1마리",
-      "probability": 10,
+      "probability": 20,
       "limit": 1,
       "imageUrl": "https://raw.githubusercontent.com/bsens90-wq/hwg_main/main/main/images/kyo.png"
     },
     {
       "name": "애플망고 1box",
-      "probability": 1,
+      "probability": 10,
       "limit": 1,
       "imageUrl": "https://raw.githubusercontent.com/bsens90-wq/hwg_main/main/main/images/apple.png"
     },
     {
       "name": "샤넬 립글로우 1개",
-      "probability": 0.5,
+      "probability": 5,
       "limit": 1,
       "imageUrl": "https://raw.githubusercontent.com/bsens90-wq/hwg_main/main/main/images/cha.png"
     },
