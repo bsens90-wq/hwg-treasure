@@ -37,5 +37,13 @@
     }
   ],
   "digProb": 30,
-  "digCooltime": 3
+  "digCooltime": 3,
+  "menuVisibility": {
+    "guide": true,
+    "surgery": true,
+    "analysis": false,
+    "contact": true,
+    "naverCheck": false,
+    "treasure": false
+  }
 }
