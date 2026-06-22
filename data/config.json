@@ -40,9 +40,10 @@
   "digCooltime": 3,
   "menuVisibility": {
     "guide": true,
-    "surgery": false,
+    "surgery": true,
     "analysis": false,
     "contact": true,
+    "silson": true,
     "naverCheck": false,
     "treasure": false
   }
